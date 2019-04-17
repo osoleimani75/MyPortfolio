@@ -10,7 +10,7 @@ const hbs = exphbs.create({
     defaultLayout: 'masterPage',
     layoutsDir   : path.join(__dirname, '/views'),
     helpers      : path.join(__dirname, '/Public/helpers'),
-    partialsDir  : path.join(__dirname, '/views/Partials')
+    partialsDir  : path.join(__dirname, '/views/partials')
 });
 
 app.engine('handlebars', hbs.engine);
