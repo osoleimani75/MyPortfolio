@@ -4,7 +4,7 @@ var exphbs  = require('express-handlebars');
 const path = require("path");
 var app = express();
 
-app.use(express.static("public"));
+app.use(express.static("Public"));
 
 const hbs = exphbs.create({
     defaultLayout: 'masterPage',
