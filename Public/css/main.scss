@@ -1,0 +1,244 @@
+//---------- Variable 
+    @import "./scss/variable.scss";
+
+//---------- Message Box
+    @import "./scss/boxMessage.scss";
+
+// ----------- LeftSide Styles
+    @import "./scss/side.scss";
+
+// ----------- Public Styles
+    @import "./scss/public.scss";
+ 
+@font-face {
+    font-family: Klavika;
+    src: url("./font/Klavika Regular.otf") format("opentype");
+}
+body{
+    font-family: 'Klavika', sans-serif;
+}
+table{
+    text-align: left; 
+    tr{
+        @extend .pb-20; 
+    }
+    td{
+        font-size: 1.2em !important;
+        @extend .pt-15;
+
+        &:nth-child(1){
+            font-weight: bold;
+         }
+        &:nth-child(2){
+           @extend .pl-15;
+        }
+    }
+}
+
+#Education{
+    table{
+        width: 100%;
+        td{
+    
+            &:nth-child(1){
+                width: 35%;
+             }
+            &:nth-child(2){
+                width: 30%;
+            }
+            &:nth-child(3){
+                width: 20%;
+            }
+        }
+    }
+}
+ #Experience{
+    table{
+        width: 100%;
+        td{
+    
+            &:nth-child(1){
+                font-weight: 400;
+                width: 35%;
+             }
+            &:nth-child(2){
+                width: 30%;
+            }
+            &:nth-child(3){
+                width: 20%;
+            }
+        }
+    }
+}    
+    
+// .row::after { 
+//     content: "";
+//     clear: both; 
+//     display: table; 
+//   }  
+//   .row{
+//       display: grid;
+
+//   }
+//   [class*="col-"] {
+//     float: left;
+//     padding: 15px;
+//   }     
+
+// ----------- Styles
+.container{
+    width: 80vw; 
+    margin: auto;
+    padding: 0;
+    .sideBar{
+        position: fixed; 
+        width: 200px;
+        height: 100vh;
+        background-color: darken($background, 4%);
+    } 
+    .layouts{
+        display: grid; 
+        min-width: 400px; 
+        grid-template-columns: 260px auto;
+        @extend .px-20;
+        .bodyContainer{   
+            grid-column-start: 2;
+            
+            // @extend .boxStyle; 
+            // .boxTitle{  
+            //     background-color: darken($bgprofile,15);
+            // }
+        }
+    } 
+     
+}
+
+.boxTitle{
+    width: 100%;
+    height: 50px; 
+    min-height: 50px;
+    border-radius: 5px 5px 0 0;
+    color: lighten($bgprofile,30);
+    @extend .px-0;
+    h4{
+        text-transform: uppercase;
+        line-height: 50px;
+        font-size: 1.6em;
+        margin: 0;
+        padding: 0 20px;
+    }
+}
+.boxContent{
+    padding: 1.1em;
+}
+
+.boxStyle{
+    border-radius: 5px;
+    border: 1px solid lighten($bgprofile,30);
+}
+
+
+
+
+
+// ------------- Media Styles 
+//---------------------------
+@media only screen and (max-width: 760px) {
+    .container{
+        width: 90vw;
+        .left-side{
+            display: none;
+        }    
+        .layouts{  
+            grid-template-columns: auto;
+            .bodyContainer{
+                grid-column-start: 1;
+            }
+        }
+        
+    }
+    
+}
+
+
+
+/* For mobile phones: */
+// [class*="col-"] {
+//     width: 100%;
+//   }
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+  }
+
+  @media only screen and (min-width: 960px) {
+    /* For larg desktop: */
+    .col-l-1 {width: 8.33%;}
+    .col-l-2 {width: 16.66%;}
+    .col-l-3 {width: 25%;}
+    .col-l-4 {width: 33.33%;}
+    .col-l-5 {width: 41.66%;}
+    .col-l-6 {width: 50%;}
+    .col-l-7 {width: 58.33%;} 
+    .col-l-8 {width: 66.66%;}
+    .col-l-9 {width: 75%;}
+    .col-l-10 {width: 83.33%;}
+    .col-l-11 {width: 91.66%;}
+    .col-l-12 {width: 100%;}
+  }
+
+  @media only screen and (min-width: 1200px) {
+    /* For X-larg desktop: */
+    .col-xl-1 {width: 8.33%;}
+    .col-xl-2 {width: 16.66%;}
+    .col-xl-3 {width: 25%;}
+    .col-xl-4 {width: 33.33%;}
+    .col-xl-5 {width: 41.66%;}
+    .col-xl-6 {width: 50%;}
+    .col-xl-7 {width: 58.33%;}
+    .col-xl-8 {width: 66.66%;}
+    .col-xl-9 {width: 75%;}
+    .col-xl-10 {width: 83.33%;}
+    .col-xl-11 {width: 91.66%;}
+    .col-xl-12 {width: 100%;}
+  }

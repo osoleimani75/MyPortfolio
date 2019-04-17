@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+.left-side{
+    position: fixed;
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color:$bgTemp; 
+    // ------- Side Menu
+
+    #side-menu {
+        box-sizing: border-box;
+        .title-menu{
+            width: 100%;
+            height: 130px !important;
+            H3{
+                padding: 0;
+                margin: 0;
+            }
+            P{
+                margin: 5px 0 0;
+                color: lighten($bgTemp, 60%)
+            }
+
+        }
+        ul{
+            list-style:none;
+            margin: 0;
+            padding: 0
+        }
+        li,.title-menu {
+            position: relative;
+            border-bottom: 1px solid lighten($bgTemp,20%);
+
+            span{
+                position: absolute;
+                width: 7px;
+                height: 100%;
+                z-index: -1
+            }
+        }
+        
+        li:nth-child(1) span{background-color: $gray;}
+        li:nth-child(2) span{background-color: $khaki}
+        li:nth-child(3) span{background-color: $brown}
+        li:nth-child(4) span{background-color: $red}
+        
+        li a, .title-menu{
+            box-sizing: border-box;
+            display: table;
+            width: 100%;
+            height: 100px;
+            color: $pubTextColor;
+            padding: 25px 0 0 30px;
+            text-decoration: none;
+        }
+        
+        
+    }
+}
