@@ -1,4 +1,5 @@
 var express = require('express');
+const PORT = process.env.PORT || 3002;
 var exphbs  = require('express-handlebars');
 const path = require("path");
 var app = express();
@@ -26,4 +27,8 @@ app.get('/contact', function (req, res) {
     res.render('layouts/contact');
 });
 
-app.listen(3001);
+
+
+app.listen(PORT,()=>{
+      console.log(`App now listening at localhost:${PORT}`);
+});
